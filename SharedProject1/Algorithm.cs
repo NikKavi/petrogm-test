@@ -5,8 +5,7 @@ namespace SharedProject1
     public delegate void onTriggerTlMessage(string name);
     public class Algorithm
     {
-        //Задано значение по умолчанию, для случая если нет другого файла для теста
-        static string[]? FileReading(string filePath = "../../../sequence.txt")
+        static string[]? FileReading(string filePath)
         {
             if (!File.Exists(filePath))
             {
@@ -17,9 +16,9 @@ namespace SharedProject1
             return sequence;
         }
 
-        public static void ChatSimulate()
+        public static void ChatSimulate(string filePath)
         {
-            string[]? sequence = FileReading();
+            string[]? sequence = FileReading(filePath);
             int personCount = 0;
             if (sequence != null)
             {
