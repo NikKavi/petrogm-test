@@ -4,6 +4,7 @@ using System.Text;
 
 namespace SharedProject1.Models
 {
+    public delegate int Message();
     abstract class Person
     {
         public string? Username { get; set; }
