@@ -78,6 +78,14 @@ namespace petrotest
                     middles[i].TriggerMiddleMessage += seniors[j].RaiseFlag;
                 }
             }
+
+            for (int i = 0; i < seniors.Length; i++)
+            {
+                for (int j = 0; j < middles.Length; j++)
+                {
+                    seniors[i].TriggerSeniorMessage += middles[j].RaiseFlag;
+                }
+            }
             Array.Clear(roleCounts, 0, roleCounts.Length); //обнуляем индексаторы
             for (int i = 0; i < personCount; i++) //здесь происходит общение
             {
@@ -93,7 +101,6 @@ namespace petrotest
                         roleCounts[1]++;
                         break;
                     case "Middle":
-
                         middles[roleCounts[2]].Talk();
                         roleCounts[2]++;
                         break;

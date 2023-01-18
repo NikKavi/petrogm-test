@@ -4,18 +4,21 @@ using System.Text;
 
 namespace SharedProject1.Models
 {
-    class Senior : Person
+     class Middle : Person
     {
+        public event Message TriggerMiddleMessage;
+
         private int reactionFlag = 0;
-        public event Message TriggerSeniorMessage;
-        public Senior(string username) : base(username)
+        public Middle(string username) : base(username)
         {
-            Phrases = new string[] { "Hey", "You are such a jnr! Are you afraid of the Team Lead?" };
+            Phrases = new string[] { "Hey", "I want a merge. Will somebody review it for me?", "AAAAaaa! No! No TL code review, please!" };
         }
 
         public override void Talk()
         {
             Console.WriteLine(Username + ": " + Phrases[0]);
+            Console.WriteLine(Username + ": " + Phrases[1]);
+            TriggerMiddleMessage();
             if(reactionFlag >= 1)
             {
                 Reaction();
@@ -25,14 +28,13 @@ namespace SharedProject1.Models
 
         private void Reaction()
         {
-
-            Console.WriteLine(Username + ": " + Phrases[1]);
-            TriggerSeniorMessage();
+            Console.WriteLine(Username + ": " + Phrases[2]);
         }
 
         public int RaiseFlag()
         {
             return reactionFlag++;
         }
+
     }
 }
