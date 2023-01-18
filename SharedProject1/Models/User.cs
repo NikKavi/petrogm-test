@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-
-namespace SharedProject1.Models
+﻿namespace SharedProject1.Models
 {
     class User : Person
     {

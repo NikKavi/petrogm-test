@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SharedProject1.Models
+﻿namespace SharedProject1.Models
 {
     public delegate int Message();
     abstract class Person
@@ -10,7 +6,7 @@ namespace SharedProject1.Models
         public string? Username { get; set; }
         public string? Role { get; set; }
         public int RoleId { get; set; }
-        public string[]? Phrases;
+        public string[] Phrases;
 
         public Person(string username)
         {

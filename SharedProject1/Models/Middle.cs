@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SharedProject1.Models
+﻿namespace SharedProject1.Models
 {
      class Middle : Person
     {
