@@ -9,6 +9,7 @@
     <Import_RootNamespace>SharedProject1</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Algorithm.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Junior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Middle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Senior.cs" />
