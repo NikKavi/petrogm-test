@@ -6,8 +6,9 @@ namespace petrotest
     {
         static void Main()
         {
-                string filePath = "../../../sequence.txt";
-                Algorithm.ChatSimulate(filePath);
+            string filePath = "../../../sequence.txt";
+            Algorithm.ChatSimulate(filePath);
+         
         }
     }
 }
