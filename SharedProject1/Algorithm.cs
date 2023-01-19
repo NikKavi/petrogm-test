@@ -22,12 +22,13 @@ namespace SharedProject1
             int personCount = 0;
             if (sequence != null)
             {
-                personCount = Array.FindAll(sequence, x => x.Contains(' ')).Length;
-            }
-            else
+                personCount = sequence.Length;
+            } else
             {
+                Console.WriteLine("Sequence Empty!");
                 return;
             }
+            
             string[] roles = { "User", "Junior", "Middle", "Senior", "TL" };
             int[] roleCounts = new int[roles.Length]; //используем для подсчёта кол-ва юзеров, джунов и тд.
             for (int i = 0; i < roles.Length; i++)
@@ -114,6 +115,11 @@ namespace SharedProject1
             for (int i = 0; i < leads.Length; i++)
             {
                 setName += leads[i].SetTriggerName;
+            }
+            if(setName == null)
+            {
+                Console.WriteLine("SetName == null!");
+                return;
             }
             Array.Clear(roleCounts, 0, roleCounts.Length); //обнуляем индексаторы
             for (int i = 0; i < personCount; i++) //здесь происходит общение
